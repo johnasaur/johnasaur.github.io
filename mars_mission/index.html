@@ -1,68 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title></title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-
     <div class="container">
         <div class="jumbotron text-center">
-            <h1>Mars Mission</h1>
-            <p><a class="btn btn-secondary btn-lg" href="/scrape" role="button">Scrape</a></p>
+          <h1>Mission to Mars</h1>
+          <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Data</a></p>
         </div>
-
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2>Mars News</h2>
-                        <hr>
-                        <h3>{{ news_title }}</h3>
-                        <p>{{ news_p }}</p>
-                    </div>
-                    <div class="col-md-12">
-                        <h2>Mars Image</h2>
-                        <img class="img-fluid" src= "{{ featured_image_url }}">
-                    </div>
-                </div>
+    
+        <div class="row" id="mars-news">
+          <div class="col-md-12">
+              <h3>Latest News for Mars</h3>
+                <h4>{{mars.newsm}}</h4>
+                    <p>{{mars.paragraphm}}</p>
+          </div>
+        </div>
+        <div class ="row" id="mars-image">
+            <div class = "col-md-8">
+                <h3>Featured Image</h3>
+                <img src = "{{mars.imagem}}" alt ="Mars Image">
             </div>
-            <div class="col-md-4">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="media border">
-                            <div class="media-body my-3 mx-1">
-                                <h4>Mars Weather</h4>
-                                <p>{{ mars_weather }}
+            <div class = "col-md-4">
+                    <h4>Current Mars Weather</h4>
+                    <p>{{mars.weatherm}}</p>
+                    <br>
+                    <h4>Mars Facts</h4>
+                    <p>{{mars.factsm | safe}}</p>
+                </div>
+        </div>
+        
+        <div class ="row" id="mars-hemispheres">
+            <div class = "col-md-12">
+                <h3><center>Mars Hemispheres</center></h3>
+                {% for hemisphere in mars.hemispherem %}
+                    <div class = "col-md-6">
+                        <div class = "thumbnail">
+                            <img src = "{{hemisphere.img_url}}">
+                                <h3>{{hemisphere.title}}</h3>
                             </div>
                         </div>
+                {% endfor %}
                     </div>
-                    <div class="col-md-12 mt-5">
-                        <h4>Mars Facts</h4>
-                        <hr>
-                        {{ mars_facts }}
-                    </div>
-                </div>
+            
             </div>
         </div>
-
-        <div class="row mt-5">
-            <div class="col-md-12 text-center">
-                <h2>Mars Hemispheres</h2>
-                <hr>
-            </div>
-
-        {% for hemi_url in hemisphere_image_url %}
-        <div class="col-md-6">
-            <figure class="figure">
-                <img class="figure-img img-fluid my-1" src="{{ hemi.img_url }}">
-                <figcaption class="figure-caption"><h4>{{ hemi.title }}</h4></figcaption>
-            </figure>
         </div>
-        {% endfor %}
-    </div>
-
+        </div>
+      </div>
 </body>
 </html>
