@@ -88,9 +88,26 @@
                         {% for hem in mars.mars_hemi %}
                             <div class = "col-md-6">
                                 <div class = "thumbnail">
-                                        <img src = {{hem["img_url"]}}>
-                                        <h3>{{ hem.title }}</h3>
-                                        
+                                    <h3>{{ hem.title }}</h3>
+                                        <div class="row">
+                                             <div class="column">
+                                                <img src = {{hem["img_url"]}} style="width:200%">
+                                                     </div>     
+                                            
+                                    <style>
+                                      
+                                .column {
+                                float: left;
+                                width: 35%;
+                                padding: 1px;
+                            }
+
+                           .row::after {
+                            content: "";
+                            clear: both;
+                            display: table;
+                                }
+                                        </style>
                                     </div>
                                 </div>
                             </div>   
