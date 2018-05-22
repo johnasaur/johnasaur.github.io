@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Import CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Import JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Import plotly -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <title>AJ Website</title>
+</head>
+<body style = "background-color:antiquewhite
+">
+    <nav class="navbar navbar-default">
+        <div class = "container">
+            <div class = "navbar-header">
+                    <a class = "navbar-brand logo" href= "index.html">
+                    <span class="nav-color"> HOME</span></a>
+            <div class = "nav navbar-nav navbar-center" role="navigation">
+
+                <style>
+                    .div {
+                        width: 150%;
+                        text-align: center;
+                    }
+                    li {
+                        float: none;
+                        display: inline-block;
+                    }
+                    span {
+                        font-size: 35px;
+                    }
+                    </style>
+
+        <li><a href = "AboutMe.html">ABOUT ME</a></li>
+        <li><a href = "Projects.html">PROJECTS EXPO</a></li>
+        <li><a href = "Experience.html">DATA SKILLS and EXPERIENCE</a></li>
+        <li><a href = "ContactMe.html">CONTACT ME</a></li>
+
+            </div>
+               
+        </div>
+    </nav>
+
+    <style>
+    a { 
+        font-size: 16px;
+        font-style: normal;
+        font-weight: bold;
+    }
+    h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 35px;
+        color:goldenrod;
+        margin:1cm;
+    }
+    
+    </style>
+
+<table width=100% height=100%><tr><td width=50%><h1>Coding Skills</h1>
+
+    <div class="contentContainer">
+    <div class="progressBar">  
+    <h4>Excel/VBA</h4>
+    <div class="progressBarContainer">
+    <div class="progressBarValue value-70"></div>
+     </div>
+     </div>
+    
+    <div class="progressBar">
+    <h4>Python</h4>
+     <div class="progressBarContainer">
+     <div class="progressBarValue value-40"></div>
+    </div>
+    </div>
+    
+    <div class="progressBar">
+    <h4>API/JSON</h4>
+    <div class="progressBarContainer">
+    <div class="progressBarValue value-40"></div>
+    </div>
+    </div>
+            
+    <div class="progressBar">
+    <h4>SQL</h4>
+    <div class="progressBarContainer">
+    <div class="progressBarValue value-80"></div>
+    </div>
+    </div>
+    
+    <div class="progressBar">
+    <h4>HTML/CSS</h4>
+    <div class="progressBarContainer">
+    <div class="progressBarValue value-50"></div>
+    </div>
+    </div>
+    </div>
+            
+    <style>
+        .contentContainer {
+      background: #efefef;
+      padding: 20px;
+      max-width: 350px;
+      min-width: 150px;
+      margin: 1cm;
+      border-radius: 10px;
+      border: solid 5px #dbdbdb;
+      position: left;
+    }
+    .progressBar {
+      margin-bottom: 26px;
+      margin-bottom: 1.66em;
+      position: left;
+    }
+    .progressBar h4 {
+      font-size: 21px;
+      font-size: 1.33em;
+      text-transform: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin-bottom: 7px;
+      margin-bottom: .33em;
+      position: left;
+    }
+    .progressBarContainer {
+      width: 100%;
+      max-width: 350px;
+      height: 26px;
+      height: 1.66em;
+      background: #e6eae3;
+      background: rgba(8,102,220,.2);
+      overflow: hidden;
+      border-radius: 5px;
+      position: left;
+    }
+    .progressBarValue {
+      height: 1.66em;
+      float: left;
+      background: #0866dc;
+      background: rgba(8,102,220,.75);
+      position: left;
+    }
+    .value-00 { width: 0; }
+    .value-10 { width: 10%; }
+    .value-20 { width: 20%; }
+    .value-30 { width: 30%; }
+    .value-40 { width: 40%; }
+    .value-50 { width: 50%; }
+    .value-60 { width: 60%; }
+    .value-70 { width: 70%; }
+    .value-80 { width: 80%; }
+    .value-90 { width: 90%; }
+    .value-100 { width: 100%; }
+    </style>
+    </td><td width=70%>
+        <h1>Hobbies and Interests</h1>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Reading", "Learning", "Running", "Foreign Languages", "Writing", "Flags"],
+        datasets: [{
+            label: 'Hobbies',
+            data: [12, 17, 7, 10, 5, 7],
+            backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+    </td>
+    </tr>
+    </table>
+       </body>
+
+<hr>       
+  <div class="bottom-bar">
+      Aura Johnson © 2018 | <a href="http://www.linkedin.com/in/aurajohnson">LinkedIn</a> | <a href="https://github.com/johnasaur">GitHub</a> | <a href="mailto:aurabj7@gmail.com">Contact me</a>
+      <hr>
+      </script>
+  </div>
+</footer>
+</html>
