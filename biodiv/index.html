@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Biodiversity Dashboard</title>
+
+    <!-- imported CSS & JS -->
+    <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
+    
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="jumbotron">
+               <h1>Biodiversity Dashboard</h1>
+                    <style>
+                   .jumbotron {
+    text-align: center;
+    background-color:khaki;
+    min-height: 23px;
+    }
+h1 {
+    font-size: 10px;
+    font-weight: bold;
+}
+                    </style>
+                    <br>
+                    <p>Choose from below to see interactive data sets</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-2">
+            <div class="container" id="sample-select">
+                <h2>Choose Sample</h2>
+                <style>
+                h2 {
+                    font-size: 20px;
+                }
+                </style>
+                <br>
+                <div class="dropdown">
+                    <select id="selDataset" onchange="optionChanged(this.value)"></select>
+                </div>
+                <br>
+                <br>
+            </div>
+            <br>
+            <div class="first-panel">
+                <div class="panel panel-info">
+                    <div class="panel panel-heading">
+                         Metadata
+                    </div>
+                    <div class="panel-body" id="sampleMetadata"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div id="pie"></div>
+        </div>
+        
+
+    <div class="row">
+        <div class="col-md-12">
+            <div id="bubble"></div>
+        </div>
+    </div>
+    
+   
+    <script src="{{ url_for('static', filename='plotly.js') }}"></script>
+    
+</body>
+</html> 
