@@ -1,9 +1,11 @@
-#### Links to deployed websites:
+#### Links to deployed websites in chronological order:
 
-Portfolio: https://johnasaur.github.io/ 
+1. Portfolio: https://johnasaur.github.io/ 
 
-Web Analysis: https://johnasaur.github.io/web-analysis/
+2. Web Analysis: https://johnasaur.github.io/web-analysis/
 
-JavaScript Aliens: https://johnasaur.github.io/javascript-aliens/
+3. JavaScript Aliens: https://johnasaur.github.io/javascript-aliens/
+
+4. Geo Maps: https://johnasaur.github.io/static/
 
 
